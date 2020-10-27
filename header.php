@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
     <html lang="en">
         <head>
@@ -10,24 +13,20 @@
         </head>
         <body>
 
-
-        <header class="black" style="background-color: yellow;">
+        <header class="black">
             <nav>
                 <a href="index.php">Home</a>
             </nav>
 
-            <div class="container text-center">
-                Header yellow
-                <form action="includes/login.inc.php" method="post">
-                    <input type="text" name="emailuid" placeholder="E-mail or username">
-                    <br>
-                    <input type="password" name="password" placeholder="Password">
-                    <br>
-                    <button type="submit" name="login-submit">Login</button>
-                </form>
-                <a href="sighup.php">Sign up</a>
-                <form action="includes/logout.inc.php" method="post">
-                    <button type="submit" name="logout-submit">Logout</button>
-                </form>
-            </div>
+                <?php echo $_GET['error']; ?>
+
+            <!-- login form-->
+            <?php
+            if (!isset($_SESSION['username'])) {
+                include 'includes/form/login.html';
+            } else {
+                include 'includes/form/logout.html';
+            }
+            ?>
+            <!-- /login form -->
         </header>

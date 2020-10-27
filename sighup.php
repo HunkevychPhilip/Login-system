@@ -1,8 +1,7 @@
 <?php require 'header.php'?>
 
     <main>
-        <div class="container text-center" style="background-color: aqua;">
-            Sighup aqua
+        <div class="container text-center">
             <h1>Sign up</h1>
             <form action="includes/sighup.inc.php" method="post">
                 <input type="text" name="uid" placeholder="Username" value="<?= $_GET['uid']; ?>">
@@ -18,6 +17,4 @@
         </div>
     </main>
 
-<?php require 'footer.php.php'?>
-
-
+<?php require 'footer.php'?>
