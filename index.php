@@ -1,7 +1,10 @@
 <?php require 'header.php'?>
 
     <main>
-        <p>Hello, world!</p>
+        <div class="container text-center">
+            <p>You are logged out.</p>
+            <p>You are logged in.</p>
+        </div>
     </main>
 
 <?php require 'footer.php.php'?>
