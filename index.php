@@ -37,7 +37,7 @@
                 echo '<p style="color: red;">There is no such email or username.</p>';
             }
         } elseif ($_GET['sighup'] == 'success') {
-            echo '<p style="color: green;">Sighup successful!</p>';
+            echo '<p style="color: green;">Signup successful!</p>';
         }
         ?>
 
