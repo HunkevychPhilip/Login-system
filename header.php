@@ -30,9 +30,9 @@
                             </li>
                         </ul>
                         <!-- Login form-->
-                        <?php if (!isset($_SESSION['username']) && $_GET['sighup_form'] == true): ?>
-                            <?php include 'includes/form/sighup.html'; ?>
-                        <?php elseif (!isset($_SESSION['username']) && $_GET['sighup_success'] == true): ?>
+                        <?php if (!isset($_SESSION['username']) && isset($_GET['sighup_form']) == true): ?>
+                            <?php include 'includes/form/sighup.php'; ?>
+                        <?php elseif (!isset($_SESSION['username']) && isset($_GET['sighup_success']) == true): ?>
                             <?php include 'includes/form/login.html'; ?>
                         <?php elseif (!isset($_SESSION['username'])): ?>
                             <?php include 'includes/form/login.html'; ?>
