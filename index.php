@@ -14,7 +14,7 @@
         <p><?= $message ?></p>
 
         <?php
-        if ($_GET['error']) {
+        if (isset($_GET['error'])) {
             if ($_GET['error'] == 'empty_fields') {
                 echo '<p style="color: red;">Fields.</p>';
             } elseif ($_GET['error'] == 'invalid_email_uid') {
@@ -36,7 +36,7 @@
             }elseif ($_GET['error'] == 'uid_does_not_exist') {
                 echo '<p style="color: red;">There is no such email or username.</p>';
             }
-        } elseif ($_GET['sighup'] == 'success') {
+        } elseif (isset($_GET['sighup']) && $_GET['sighup'] == 'success') {
             echo '<p style="color: green;">Signup successful!</p>';
         }
         ?>
